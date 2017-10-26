@@ -1,0 +1,743 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ShanReal 三锐联合科技有限公司 | Home :: w3layouts</title>
+<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Google Fonts -->
+<link href='http://fonts.useso.com/css?family=Titillium+Web:200,300,600,400,700,900' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body,td,th {
+	font-family: "黑体", "仿宋", "华文宋体", "华文新魏", "隶书", "微软雅黑", "华文彩云";
+}
+</style>
+<!--- banner Slider starts Here --->
+<script src="./js/responsiveslides.min.js"></script>
+ <script>
+    // You can also use "$(window).load(function() {"
+    $(function () {
+      // Slideshow 4
+      $("#slider4").responsiveSlides({
+        auto: true,
+        pager: true,
+        nav: true,
+        speed: 500,
+        namespace: "callbacks",
+        before: function () {
+          $('.events').append("<li>before event fired.</li>");
+        },
+        after: function () {
+          $('.events').append("<li>after event fired.</li>");
+        }
+      });
+
+    });
+  </script>
+<!----//End-slider-script---->
+<script type="text/javascript" src="./js/jquery.mixitup.min.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	var filterList = {
+	
+		init: function () {
+		
+			// MixItUp plugin
+			// http://mixitup.io
+			$('#portfoliolist').mixitup({
+				targetSelector: '.portfolio',
+				filterSelector: '.filter',
+				effects: ['fade'],
+				easing: 'snap',
+				// call the hover effect
+				onMixEnd: filterList.hoverEffect()
+			});				
+		
+		},
+		
+		hoverEffect: function () {
+		
+			// Simple parallax effect
+			$('#portfoliolist .portfolio').hover(
+				function () {
+					$(this).find('.label').stop().animate({bottom: 0}, 200, 'easeOutQuad');
+					$(this).find('img').stop().animate({top: -30}, 500, 'easeOutQuad');				
+				},
+				function () {
+					$(this).find('.label').stop().animate({bottom: -40}, 200, 'easeInQuad');
+					$(this).find('img').stop().animate({top: 0}, 300, 'easeOutQuad');								
+				}		
+			);				
+		
+		}
+
+	};
+	
+	// Run the show!
+	filterList.init();
+	
+	
+});	
+</script>
+<script type="text/javascript" src="./js/move-top.js"></script>
+<script type="text/javascript" src="./js/easing.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$(".scroll").click(function(event){		
+		event.preventDefault();
+		$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+	});
+});
+</script>
+</head>
+<body>
+	<!--- Header Starts Here -->
+		<div class="header" id="home">
+			<div class="container">
+				<div class="logo">
+					<a href="index.html"><img src="./images/logo.png" alt=""/></a>
+				</div>
+				<span class="menu"></span>
+				<div class="clears"></div>
+				<div class="navigation">
+					<ul class="navig">
+						<li><a href="#about" class="scroll"><i class="bag"></i><p>关于我们</p><div class="clears"></div></a></li>
+						<li class="naa" ><a href="#service" class="scroll"><i class="settings"></i><p>专业服务</p><div class="clears"></div></a></li>
+						<li class="nab"><a href="#portofilo" class="scroll"><i class="gallery"></i><p>解决方案</p><div class="clears"></div></a></li>
+						<li class="nac"><a href="#blog" class="scroll"><i class="message"></i><p>云&大数据</p><div class="clears"></div></a></li>
+						<li class="nad"><a href="#clients" class="scroll"><i class="like"></i><p>加入我们</p><div class="clears"></div></a></li>
+						<li class="nae"><a href="#contact" class="scroll"><i class="send"></i><p>联系我们</p><div class="clears"></div></a></li>
+					</ul>
+				</div>
+				<script>
+					$( "span.menu" ).click(function() {
+					  $( ".navigation" ).slideToggle( "slow", function() {
+					    // Animation complete.
+					  });
+					});
+				</script>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	<!--- Header Ends Here --> 
+	<!-- Banner Starts Here --->
+	<div class="banner">
+		<div class="container">
+		<!-- Slideshow 4 -->
+		    <div  id="top" class="callbacks_container">
+		      <ul class="rslides" id="slider4">
+			        <li>
+			        	<div class="row banner-row">
+							<div class="col-md-6 banner-column">
+								<img src="./images/hand6.png" alt="" />
+							</div>
+							<div class="col-md-6 banner-column ban_cl">
+								<h1>互联网冲击传统业务，IT该如何适应？</h1>
+								<p>怎么样快速部署开发追上业务的步伐？怎样面对快速变化的组织架构和商业模式？.</p>
+								<div class="ban-but">
+									<!--<a href="#">about Us</a>
+									<a href="#" class="active">Contacts</a>-->
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+					<li>
+			        	<div class="row banner-row">
+							<div class="col-md-6 banner-column">
+								<img src="./images/hand7.png" alt="" />
+							</div>
+							<div class="col-md-6 banner-column ban_cl">
+								<h1>商业智能</h1>
+								<p>业务怎样才有复制性, 什么是我们成功背后的逻辑？</p>
+								<div class="ban-but">
+									<!--<a href="#">about Us</a>
+									<a href="#" class="active">Contacts</a>-->
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+					<li>
+			        	<div class="row banner-row">
+							<div class="col-md-6 banner-column">
+								<img src="./images/hand8.png" alt="" />
+							</div>
+							<div class="col-md-6 banner-column ban_cl">
+								<h1>三锐联合的解决方案</h1>
+								<p>IT架构的集中整合,快速敏捷的开发方式,灵活可配置的组织架构与授权,可视化配置的业务流程.</p>
+								<div class="ban-but">
+									<!--<a href="#">about Us</a>
+									<a href="#" class="active">Contacts</a>-->
+								</div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- End Of Slider -->
+		</div>
+	</div>
+	<!-- Banner Ends Here --->
+	<!-- About US Starts Here -->
+	<div class="about" id="about">
+		<div class="container">
+        <h3 class="top-head">关于我们</h3>
+        <span class="line">
+			<span class="sub-line"></span>
+		</span>
+		  <P>	三锐联合是由多名多年从事世界500强IT企业的顾问,架构师以及销售精英发起，致力于为客户提供IT架构咨询与交付，应用软件开发与服务，移动互联网的应用与传统业务转型.</P>
+			<div class="row about-row">
+				<div class="col-md-3 about-column">
+					<i><img src="./images/p1.jpg" alt="" class="wt"/></i>
+					<ul class="about-social">
+						<li><i class="fa"></i></li>
+						<li><i class="fb"></i></li>
+						<li><i class="fc"></i></li>
+						<li><i class="fd"></i></li>
+						<li><i class="fe"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-3 about-column">
+					<i><img src="./images/p2.jpg" alt=""/></i>
+					<ul class="about-social">
+						<li><i class="fa"></i></li>
+						<li><i class="fb"></i></li>
+						<li><i class="fc"></i></li>
+						<li><i class="fd"></i></li>
+						<li><i class="fe"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-3 about-column">
+					<i><img src="./images/p3.jpg" alt=""/></i>
+					<ul class="about-social">
+						<li><i class="fa"></i></li>
+						<li><i class="fb"></i></li>
+						<li><i class="fc"></i></li>
+						<li><i class="fd"></i></li>
+						<li><i class="fe"></i></li>
+					</ul>
+				</div>
+				<div class="col-md-3 about-column">
+					<i><img src="./images/p4.jpg" alt=""/></i>
+					<ul class="about-social">
+						<li><i class="fa"></i></li>
+						<li><i class="fb"></i></li>
+						<li><i class="fc"></i></li>
+						<li><i class="fd"></i></li>
+						<li><i class="fe"></i></li>
+					</ul>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+	  </div>
+	</div>
+	<!-- About US Ends Here -->
+	<!-- Subscribe Starts Here --->
+	<div class="subscribe">
+		<div class="container">
+			<span class="subscribed">
+				<input type="text"  placeholder="Add Your E-mail Here" required /><input type="submit" value="subscribe"><input type="button">
+			</span>
+		</div>
+	</div>
+	<!-- Subscribe Ends Here --->
+	<!-- What We Do Starts Here -->
+	<div class="what-we" id="service">
+		<div class="container">
+			<h3 class="top-head">专业服务</h3>  
+			<span class="line l_2">
+				<span class="sub-line s_l_2"></span>
+			</span>
+			<p>专业 专注 持之以恒.<br>诚信 承诺 相拥共赢.</p>
+			<div class="row what-we-row">
+				<div class="col-md-3 what-we-column">
+					<i class="brand"></i>
+					<h3>系统架构顾问</h3>
+					<p>丰富的企业级系统经验,为客户打造高可用,可无缝并行扩展的高效架构.安全统一认证;可视化集中授权;图形化流程管理开发;企业ESB&BPM设计;主数据管理及BI;统一企业门户;并行数据库设计;</p>
+				</div>
+				<div class="col-md-3 what-we-column cl_1">
+					<i class="web"></i>
+					<h3>软件开发及外包</h3>
+					<p>有活力并富有经验的开发团队;多年的Java开发设计以及性能优化经验;IOS& Android以及HTML5前端开发经验;敏捷开发的方法论;数据库设计及优化,开发业务涉及金融,零售,电商,制造业,电信等多个行业.</p>
+				</div>
+				<div class="col-md-3 what-we-column cl_2">
+					<i class="dev"></i>
+					<h3>SOA及业务快速搭建</h3>
+					<p>当今社会新业务模式不断冲击传统行业的商业模式，而传统的冗长咨询开发模式已经不能适应现在快速频繁的组织架构，以及不断改变的商业模式.将企业业务单元解耦，快速开发部署，为任何其他业务单元提供服务</p>
+				</div>
+				<div class="col-md-3 what-we-column cl_3">
+					<i class="sup"></i>
+					<h3>移动互联及O2O</h3>
+					<p>将传统企业IT所专注的供应链环节转移到以客户和研发为根本的O2O生态链.再结合大数据分析客户喜好和长期满意度跟踪.重新打造企业的营销模式和业务逻辑,以及百万级的用户访问冲击的后台架构设计能力</p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- What We Do Ends Here -->
+	<!-- Fun Facts Starts HEre -->
+	<!--<div class="fun-fact">
+		<div class="container">
+			<h3 class="top-head">FUN FACTS ABOUT OUR AGENCY</h3>
+			<span class="line">
+				<span class="sub-line"></span>
+			</span>
+			<p>Creativity is allowing yourself to make mistakes.<br>Art is knowing which ones to keep.</p>
+			<div class="row fun-row">
+				<div class="col-md-3 fun-column">
+					<div class="fun-facts-div">
+						<i class="pizza"></i>
+						<div class="fun-right">
+							<p>895</p>
+							<h4>PIZZAS ORDERED</h4>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-3 fun-column">
+					<div class="fun-facts-div">
+						<i class="cup"></i>
+						<div class="fun-right">
+							<p>2158</p>
+							<h4>cups of coffee</h4>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-3 fun-column">
+					<div class="fun-facts-div">
+						<i class="project"></i>
+						<div class="fun-right">
+							<p>219</p>
+							<h4>PROJECTS COMPLETED</h4>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="col-md-3 fun-column">
+					<div class="fun-facts-div">
+						<i class="code"></i>
+						<div class="fun-right">
+							<p>99 905</p>
+							<h4>lines of code</h4>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>-->
+	<!-- Fun Facts Ends HEre -->
+	<div class="cots-row">
+		<div class="container">
+			<blockquote>
+				<!--<h4>Scott Adams</h4>-->
+				<p>创造力是允许你自己去犯错误.</p>
+				<p class="cot_2"> 艺术是知道如何去抉择.</p>
+			</blockquote>
+		</div>
+	</div>
+	<!-- Price Starts Here -->
+	<div class="clients" id="clients">
+		<div class="container">
+			<h3 class="top-head">诚邀加盟</h3>
+			<span class="line l_2">
+				<span class="sub-line s_l_2"></span>
+			</span>
+		  <p>三锐提供一个开放,融洽的工作环境.我们的客户均为国内知名企业或机构,您有机会学到知名企业架构设计<br>开放包容，锐意进取</p>
+			<div class="row price-row">
+				<div class="col-md-3 price-column">
+					<div class="price-grid">
+						<div class="price-gridy">
+							<h4>项目经理</h4>
+						</div>
+							<small>竞争力的薪水+分红</small>
+						<ul class="price-list"><li>具备大型J2EE系统技术架构分析、设计、底层搭建工作经验；<br>
+						</li>
+							<li>经历多个项目需求，分析，设计，测试等方案评审经验</li>
+							<li>负责软件系统平台核心功能模块设计、核心代码开发</li>
+							<li>主导项目关键技术问题的攻关，协助项目管理对技术问题进行跟踪</li>
+							<li>熟悉设计模式，以及各种应用架构、数据架构与系统架构</li>
+                            <li>优秀团队领导能力 协调及沟通能力.热爱本职工作，强烈求知欲</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 price-column p_col">
+				  <div class="price-grid">
+					<h4 class="p_act">JAVA工程师</h4>
+						<small class="sm_act">薪水面议</small>
+					<ul class="price-list">
+							<li>熟悉使用springmvc、spring、SSH,myBatis/iBatis等常用开发框架；查看、分析其它Java开源项目源代码者优先</li>
+							<li>熟悉JavaScript，AJAX技术及jQuery</li>
+							<li>熟悉 MySQL 数据库技术，对SQL优化有一定的经验</li>
+							<li>为人正直，诚信可靠，良好的团队协作意识，极强的责任心与敬业精神，强烈求知欲</li>
+				    </ul>
+				  </div>
+				</div>
+				<div class="col-md-3 price-column">
+					<div class="price-grid">
+						<h4>Web前端工程师</h4>
+						<small>薪水面议</small>
+						<ul class="price-list">
+							<li>握基本的web前端技术css、js、html、jquery </li>
+							<li>掌握网站的性能优化、SEO、UE、服务器端、兼容性、存在的bug等</li>
+							<li>有良好的代码规范编写习惯</li>
+							<li>熟悉photoshop优先</li>
+							<li>团队合作意识，强烈求知欲</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3 price-column p_col">
+					<div class="price-grid">
+						<h4>销售经理</h4>
+						<small>面议</small>
+						<ul class="price-list">
+							<li>负责所属区域IT服务产品的销售和市场拓展 </li>
+							<li>重点大客户的日常客户关系管理 </li>
+							<li>积极主动，有一定抗压能力</li>
+							<li>完成公司下达销售指标</li>
+							<li>团队合作意识</li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- Price Ends Here -->
+	<!-- Portfolio Starts Here -->
+	<!--<div class="portfolios" id="portfolio1">
+		<div class="container">
+			<h3 class="top-head w_hd">Portofilio1</h3>
+			<span class="line w_l_1">
+				<span class="sub-line w_l_1"></span>
+			</span>
+			<p class="p_w">Creativity is allowing yourself to make mistakes.<br>Art is knowing which ones to keep.</p>
+			<ul id="filters" class="clearfix">
+						<li><span class="filter active" data-filter="app card icon logo web">All</span></li>
+						<li><span class="filter" data-filter="app">graphics</span></li>
+						<li><span class="filter" data-filter="card">web design</span></li>
+						<li><span class="filter" data-filter="icon">icons</span></li>
+						<li><span class="filter" data-filter="logos">branding</span></li>
+					</ul>
+					<div id="portfoliolist">
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic1.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  		</div></a>
+		                </div>
+					</div>				
+					<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic3.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>		
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic2.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>				
+					<div class="portfolio logos mix_all" data-cat="logo" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic4.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>	
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic6.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>			
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic5.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>	
+					<div class="portfolio logos mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic8.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper">		
+							<a href="index.html" class="b-link-stripe b-animate-go  thickbox">
+						     <img src="./images/pic7.jpg" /><div class="b-wrapper"><h2 class="b-animate b-from-left    b-delay03 "><img src="./images/plus.png" alt=""/></h2>
+						  	 </div></a>
+		                </div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="page-nat">
+					<ul class="page-list">
+						<li><i class="prev"></i></li>
+						<li><a href="#" class="activ">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><i class="next"></i></li>
+					</ul>
+				</div>
+		</div>
+	</div>-->
+	<!-- Portfolio Ends Here -->
+	<!--- Blog Starts Here -->
+	<div class="blog" id="blog">
+		<div class="container">
+			<h3 class="top-head">云&大数据</h3>
+			<span class="line">
+				<span class="sub-line"></span>
+			</span>
+			<p>创造性是允许你自己犯错误.<br>艺术是你知道如何去抉择.</p>
+			<div class="blog-top-grid">
+				<div class="blog-grid">
+					<div class="blog-date">
+						<i class="bl_a"></i>
+						<div class="d_a_t">
+							<p>01</p>
+							<small>云设计</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_1.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>openstack设计 </h4>
+						<p>针对不同客户对计算,网络,存储的需求,设计从逻辑架构到概念架构到系统架构，最后物理架构的整体设计</p>
+					</div>
+				</div>
+				<div class="blog-grid">
+					<div class="blog-date d_c_2">
+						<i class="bl_b"></i>
+						<div class="d_a_t">
+							<p>02</p>
+							<small>云部署</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_2.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>openstack部署 </h4>
+						<p>通过自动部署工具或手动对Nova Server,Nova节点,Swift,virtualbox,Glance,horizon,keystone等模块,安装配置</p>
+					</div>
+				</div>
+				<div class="blog-grid grid_r">
+					<div class="blog-date d_c_3">
+						<i class="bl_c"></i>
+						<div class="d_a_t">
+							<p>03</p>
+							<small>云开发</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_3.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>openstack开发 </h4>
+						<p>通过Nova API,Horizon,swift api根据客户的需求定制结合客户各种差异化的业务环境.包括公有云和私有云等不同的模式</p>
+					</div>
+				</div>
+				<div class="blog-grid">
+					<div class="blog-date d_c_3">
+						<i class="bl_c"></i>
+						<div class="d_a_t">
+							<p>04</p>
+							<small>大数据设计</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_4.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>hadoop设计</h4>
+						<p>根据客户情况设计用户请求接口，业务逻辑模块，计算模型模块，数据库层HBASE,分布式文件系统HDFS和集群</p>
+					</div>
+				</div>
+				<div class="blog-grid">
+					<div class="blog-date">
+						<i class="bl_d"></i>
+						<div class="d_a_t">
+							<p>05</p>
+							<small>大数据部署</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_1.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>hadoop部署 </h4>
+						<p>根据系统设计，部署HBASE,MAP/REDUCE,HIVE,HDFS,PIG等模块</p>
+					</div>
+				</div>
+				<div class="blog-grid grid_r">
+					<div class="blog-date d_c_2">
+						<i class="bl_e"></i>
+						<div class="d_a_t">
+							<p>06</p>
+							<small>大数据开发</small>
+						</div>
+					</div>
+					<div class="blog-img">
+						<img src="./images/bl_3.jpg" class="img-responsive" alt="">
+					</div>
+					<div class="clearfix"></div>
+					<div class="blog-desc">
+						<h4>hadoop开发 </h4>
+						<p>mapreduce进行高级编程，使用Hive进行数据分析，使用Hbase进行线上分析，关系型数据和HDFS、hive之间的相互迁移</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			<!--</div>
+			<div class="but_all"><a href="#">See All News</a></div>
+		</div>-->
+	</div>
+	<!--- Blog Ends Here -->
+	<!-- Clients Starts Here -->
+	<!--<div class="clients" id="clients">
+		<div class="container">
+			<h3 class="top-head w_hd">Our Happy Clients</h3>
+			<span class="line">
+				<span class="sub-line"></span>
+			</span>
+			<div class="client-row">
+				<div class="cl-img">
+					<img src="./images/cl-1.png" alt="">
+					<span class="liney"></span>
+				</div>
+				<div class="cl-img">
+					<img src="./images/cl-2.png" alt="">
+					<span class="liney"></span>
+				</div>
+				<div class="cl-img">
+					<img src="./images/cl-3.png" alt="">
+					<span class="liney"></span>
+				</div>
+				<div class="cl-img cl1-img">
+					<img src="./images/cl-4.png" alt="">
+					<span class="liney"></span>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="client-row client-row-2">
+				<div class="cl-img">
+					<img src="./images/cl-5.png" alt="">
+				</div>
+				<div class="cl-img">
+					<img src="./images/cl-6.png" alt="">
+				</div>
+				<div class="cl-img">
+					<img src="./images/cl-7.png" alt="">
+				</div>
+				<div class="cl-img cl1-img">
+					<img src="./images/cl-8.png" alt="">
+				</div>
+			</div>
+			
+		</div>
+	</div>-->
+	<!-- Clients Ends Here -->
+	<!-- Contact Starts Here -->
+	<div class="contact" id="contact">
+			<h3 class="top-head">联系我们</h3>
+			<span class="line">
+				<span class="sub-line"></span>
+			</span>
+			<p>   广东省深圳市宝安区西乡宝田一路61号博智中心(定军山电影文化创意园2期)403A5<br>深圳市三锐联合科技有限公司</p>
+			<div class="map">
+					<iframe src="http://map.baidu.com/?newmap=1&ie=utf-8&s=s%26wd%3Df518%E5%88%9B%E6%84%8F%E5%9B%AD%E5%B7%A6%E8%A1%97" frameborder="0" style="border:0"></iframe>
+				<div class="map-mask"></div>
+				<div class="map-loc">
+					<div class="locater">
+						<img src="./images/map-loc.png" alt="">
+					</div>
+					<div class="map-add">
+						<p>Room 403A,BoZhi Center,Road BaoTian No.1,baoan,shenzhen,China</p>
+						<p>86-755-23280571</p>
+						<p><a href="mailto:sales@shanreal.com">sales@shanreal.com</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<h3 class="top-head">邮件</h3>
+			<div class="container">
+				<div class="contact-box">
+					<div class="text">
+						<input type="text"  placeholder="名字" required="" />
+						<input type="text"  placeholder="E-mail" required=""/>
+						<input type="text"  class="text-1"  placeholder="Website" required=""/>
+					</div>
+					<div class="text">
+						<textarea  placeholder="内容" required=""></textarea>
+					</div>
+					<div class="text">
+						<input type="提交" value="send" />
+					</div>
+					
+				</div>
+			</div>
+	</div>
+	<!-- Contact Ends Here -->
+	<!-- Footer Starts Here --->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-logo">
+				<a href="index.html"><img src="./images/footer-logo.png" alt=""></a>
+			</div>
+			<ul class="footer-list">
+				<li><i class="fa"></i></li>
+				<li><i class="fb"></i></li>
+				<li class="act-s"><i class="fc"></i></li>
+				<li><i class="fd"></i></li>
+				<li><i class="fe"></i></li>
+				<li><i class="ff"></i></li>
+				<li><i class="fg"></i></li>
+				<li><i class="fh"></i></li>
+				<li><i class="fi"></i></li>
+				<li><i class="fj"></i></li>
+				<li><i class="fk"></i></li>
+				<li><i class="fl"></i></li>
+			</ul>
+		</div>
+	</div>
+	<div class="copyright">
+		<div class="top-up">
+			<a href="#home" class="scroll"><img src="./images/top-tp.png" alt=""></a>
+		</div>
+	</div>
+	<!-- Footer Ends Here --->
+</body>
+</html>
+
